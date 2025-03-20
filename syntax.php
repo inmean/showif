@@ -88,7 +88,7 @@ function postConnect() { $this->Lexer->addExitPattern('</showif>','plugin_showif
      * Create output
      */
     function render($mode, Doku_Renderer $renderer, $data) {
-        global $INFO;
+        global $INFO, $INPUT;
         
         if($mode == 'xhtml'){
             $renderer->nocache(); // disable caching
@@ -111,9 +111,9 @@ function postConnect() { $this->Lexer->addExitPattern('</showif>','plugin_showif
 						||
 						(($val == "mayatleastread") && (auth_quickaclcheck($INFO['id'])) >= AUTH_READ)
 						||
-						($val == "isloggedin" && ($_SERVER['REMOTE_USER']))
+						($val == "isloggedin" && $INPUT->server->str('REMOTE_USER'))
 						||
-						($val == "isnotloggedin" && !($_SERVER['REMOTE_USER']))
+						($val == "isnotloggedin" && !$INPUT->server->str('REMOTE_USER'))
 						||
 						(($val == "isadmin") && ($INFO['isadmin'] || $INFO['ismanager'] ))
 					) $show = 1;
