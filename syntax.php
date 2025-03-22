@@ -22,12 +22,13 @@ class syntax_plugin_showif extends DokuWiki_Syntax_Plugin {
  */
 function getInfo(){
     return array(
-        'author' => 'Harald Ronge',
-        'email'  => 'harald[at]turtur[.]nl',
-        'date'   => '2013-10-15',
-        'name'   => 'showif Plugin',
+        'author' => 'In Mean',
+        'email'  => 'inmean[at]inmean[.]com',
+        'date'   => '2025-03-22',
+        'name'   => 'showwhen Plugin',
         'desc'   => 
 'Shows text only if all of some conditions are true.
+Fork from showif plugin by Harald Ronge
 Lazy hiding based on plugin nodisp from Myron Turner.
 
 Syntax is <showif [condition1], [condition2], ...>[text]</showif>
@@ -45,7 +46,7 @@ Administrators will always see everything except mayonlyread.
 Not all combinations are useful ;-)
 	
 ',
-        'url'    => 'https://www.dokuwiki.org/plugin:showif',
+        'url'    => 'https://www.dokuwiki.org/plugin:showwhen',
     );
 }
 
