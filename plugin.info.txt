@@ -3,6 +3,6 @@ base   showif
 author In Mean
 email  inmean[at]inmean.com
 date   2025-03-22
-name   ShowIf Plugin
+name   ShowWhen Plugin
 desc   Show text if some condition is true.
 url    http://www.dokuwiki.org/plugin:showwhen
